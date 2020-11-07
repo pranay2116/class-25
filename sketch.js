@@ -4,12 +4,6 @@ const Bodies = Matter.Bodies;
 
 var engine, world;
 var box1, pig1;
-var backgroundImg;
-
-    function preload()
-    {
-    backgroundImg = loadImage("sprites/bg.png")        
-    }
 
 function setup(){
     var canvas = createCanvas(1200,400);
@@ -39,11 +33,11 @@ function setup(){
 }
 
 function draw(){
+    background(0);
     Engine.update(engine);
-    background(backgroundImg);
-    //console.log(box2.body.position.x);
-    //console.log(box2.body.position.y);
-    //console.log(box2.body.angle);
+    console.log(box2.body.position.x);
+    console.log(box2.body.position.y);
+    console.log(box2.body.angle);
     box1.display();
     box2.display();
     ground.display();
